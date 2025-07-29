@@ -69,6 +69,8 @@ button:hover {
   padding: 12px 28px !important;
   border-radius: 18px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
 
   border: 2px solid #c026d3;
 }
@@ -107,6 +109,7 @@ button:hover {
   justify-content: center;
   gap: 16px;
   margin-bottom: 40px;
+  max-height: 64px;
 }
 
 .hero-input {
@@ -115,7 +118,7 @@ button:hover {
   border: 1px solid #cbd5e1;
   border-radius: 26px;
   outline: none;
-  max-width: 476px;
+  min-width: 476px;
   color: #475569;
 }
 
@@ -273,7 +276,7 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 16px;
+  padding:  0 16px;
   background: #fff;
 }
 
@@ -422,13 +425,13 @@ button:hover {
   font-size: 20px;
   font-weight: 400;
   max-width: 800px;
- 
+
   max-width: 900px;
   margin: 0 auto;
 }
 
 .tools-grid {
-   margin-top: 48px;
+  margin-top: 48px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 48px 48px;
@@ -450,7 +453,7 @@ button:hover {
 .tool-name {
   font-size: 24px;
   font-weight: 700;
-  color: #0F172A;
+  color: #0f172a;
   margin-bottom: 16px;
 }
 
@@ -462,7 +465,7 @@ button:hover {
 
 /* FAQ section */
 .faq {
-  background: #F1F5F9;
+  background: #f1f5f9;
   padding: 80px;
   text-align: center;
 }
@@ -470,7 +473,7 @@ button:hover {
 .faq-title {
   font-size: 56px;
   font-weight: 800;
-  color: #C026D3;
+  color: #c026d3;
   margin-bottom: 24px;
 }
 
@@ -490,40 +493,37 @@ button:hover {
 }
 
 .faq-item {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 24px 0 rgba(30,41,59,0.10);
+  box-shadow: 0 4px 24px 0 rgba(30, 41, 59, 0.1);
   padding: 32px;
   text-align: left;
   transition: box-shadow 0.2s;
 }
 
 .faq-item:hover {
-  box-shadow: 0 8px 32px 0 rgba(160,32,240,0.10);
+  box-shadow: 0 8px 32px 0 rgba(160, 32, 240, 0.1);
 }
 
 .faq-question {
   font-size: 20px;
   font-weight: 500;
-  color: #0F172A;
-  
+  color: #0f172a;
 }
 
 /* Footer section */
 .footer {
- 
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 48px;
-  padding: 48px;
-  border-bottom: 1px solid #e2e8f0;;
+  padding: 48px 0;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .footer-title {
@@ -536,13 +536,13 @@ button:hover {
   list-style: none;
   padding: 0;
   margin: 0;
-  min-width:173.33px;
+  min-width: 173.33px;
 }
 
 .footer-col ul li {
-  margin: 12px 0;
+  margin: 24px 0;
   color: #475569;
-  font-weight: 400!important;
+  font-weight: 400 !important;
   transition: color 0.2s;
   cursor: pointer;
 }
@@ -550,8 +550,6 @@ button:hover {
 .footer-col ul li:hover {
   color: #a020f0;
 }
-
-
 
 .footer-bottom {
   padding: 25px 0;
@@ -568,11 +566,11 @@ button:hover {
   font-size: 18px;
   gap: 4px;
 }
-.footer-logo{
+.footer-logo {
   font-size: 20px;
   font-weight: 500;
 }
-.footer-copyright{
+.footer-copyright {
   color: #475569;
   font-size: 16px;
   font-weight: 400;
@@ -583,7 +581,7 @@ button:hover {
   align-items: center;
   gap: 16px;
 }
-.footer-socials a{
+.footer-socials a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -592,17 +590,54 @@ button:hover {
   min-width: 24px;
 }
 
-
-.logo-bold {
+footer .logo-bold {
   color: #1a202c;
   font-weight: 700;
   font-size: 20px;
 }
 
-.logo-purple {
+footer .logo-purple {
   color: #a020f0;
   font-weight: 700;
   font-size: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .navbar{
+    padding: 16px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+  .hero{
+    padding: 48px 0;
+    margin: 0;
+  }
+  .hero-title {
+    font-size: 32px;
+  }
+  .hero-desc {
+    font-size: 16px;
+  }
+  .hero-form{
+    max-width: 100%;
+    width: 100%;
+    gap:8px;
+  }
+  .hero-input{
+    min-width:fit-content;
+    font-size: 16px;
+    padding: 13px 24px;
+    
+  }
 
+  .hero-btn {
+    padding: 12px !important;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
