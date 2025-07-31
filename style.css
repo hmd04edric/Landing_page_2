@@ -18,6 +18,28 @@ p {
 button:hover {
   cursor: pointer;
 }
+img {
+  object-fit: cover;
+  max-width: 100%;
+}
+.main-title {
+  font-size: 72px;
+  font-weight: 800;
+  color: Fuchsia;
+}
+.sub-title{
+  color: #475569;
+  font-size: 20px;
+  font-weight: 400;
+}
+.content {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin: 0 auto;
+}
 /* start navbar style */
 
 .navbar {
@@ -74,6 +96,9 @@ button:hover {
 
   border: 2px solid #c026d3;
 }
+.nav-menu {
+  display: none;
+}
 
 .btn-start:hover {
   background: linear-gradient(90deg, #a020f0 0%, #d946ef 100%);
@@ -85,12 +110,6 @@ button:hover {
 .hero {
   text-align: center;
   margin-top: 56px;
-}
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
 }
 .hero-title {
   font-size: 72px;
@@ -144,15 +163,7 @@ button:hover {
   padding: 80px 0;
   text-align: center;
 }
-.improve-content {
-  max-width: 900px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  margin: 0 auto;
-}
+
 .improve-title {
   font-size: 56px;
   font-weight: 800;
@@ -183,15 +194,7 @@ button:hover {
 .stories {
   padding: 80px 0;
 }
-.stories-content {
-  max-width: 900px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  margin: 0 auto;
-}
+
 
 .stories-title {
   font-size: 56px;
@@ -276,7 +279,7 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding:  0 16px;
+  padding: 0 16px;
   background: #fff;
 }
 
@@ -315,18 +318,18 @@ button:hover {
   position: absolute;
   left: 0;
   bottom: 0;
+  z-index: 1;
 }
 .decor-right {
   position: absolute;
   right: 0;
   top: 0;
+   z-index: 1;
 }
 
-.testimonials-title {
+.testimonials .main-title {
+
   text-align: center;
-  font-size: 56px;
-  font-weight: 800;
-  color: #c026d3;
   margin-bottom: 80px;
 }
 
@@ -552,7 +555,7 @@ button:hover {
 }
 
 .footer-bottom {
-  padding: 25px 0;
+  padding: 24px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -603,17 +606,21 @@ footer .logo-purple {
 }
 
 @media screen and (max-width: 768px) {
-  .navbar{
-    padding: 16px;
+  .navbar {
+    padding: 16px 0;
   }
   .nav-links {
     display: none;
   }
   .container {
-    max-width: 100%;
+    max-width: 100% !important;
+    width: auto;
     padding: 0 16px;
   }
-  .hero{
+  .nav-menu{
+    display: block;
+  }
+  .hero ,.stories,.tools,.faq{
     padding: 48px 0;
     margin: 0;
   }
@@ -623,21 +630,106 @@ footer .logo-purple {
   .hero-desc {
     font-size: 16px;
   }
-  .hero-form{
+  .hero-form {
     max-width: 100%;
     width: 100%;
-    gap:8px;
+    gap: 8px;
   }
-  .hero-input{
-    min-width:fit-content;
+  .hero-input {
+    min-width: fit-content;
     font-size: 16px;
     padding: 13px 24px;
-    
   }
-
+  .hero-image img {
+    margin: 0;
+  }
   .hero-btn {
     padding: 12px !important;
     font-size: 16px;
     font-weight: 500;
   }
+  .improve {
+    padding: 48px 0 0 0;
+  }
+  .main-title{
+    font-size: 24px;
+    text-align: center;
+  }
+  .sub-title{
+    font-size: 16px;
+    text-align: center;
+  }
+  .improve-btn{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  .stories-slider{
+    margin-top: 32px;
+
+  }
+  .stories-arrow{
+    display: none;
+  }
+  .stories-list .story-card:nth-child(2), .story-card:nth-child(3) , .story-card:nth-child(4) {
+    display: none;
+  }
+  .story-card{
+    width: 100%;
+    gap:0;
+  }
+  .stories-list {
+    width: 100%;
+  }
+  .story-info{
+    padding: 16px;
+  }
+  .testimonials-container .main-title{
+    position: relative;
+    z-index: 2;
+    margin-bottom: 32px;
+  }
+  .testimonials-arrow{
+    display: none;
+  }
+  .testimonial-card {
+    margin-top: 32px;
+    padding: 24px 16px;
+  }
+  .testimonial-heading{
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 24px;
+    
+  }
+  .testimonial-user{
+    padding-top: 24px;
+    
+  }
+  .tool-item{
+    text-align: center;
+    align-items: center;
+  }
+  .tools-grid{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+    
+  }
+  .faq-list{
+    margin-top: 32px;
+  }
+  .footer-grid{
+    grid-template-columns: repeat(1, 1fr);
+    gap:24px;
+  }
+  .footer-brand{
+    flex-direction: column;
+    align-items: start;
+  }
+  .footer-bottom{
+    flex-direction: column;
+    align-items: start;
+  }
+
 }
