@@ -16,6 +16,8 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
 
@@ -164,29 +166,57 @@
           <img src="/imgs/Deco-right.svg" alt>
         </div>
         <h2 class="main-title">What other users say</h2>
-        <div class="testimonials-slider">
-          <button class="testimonials-arrow left">
-            <img src="/imgs/chevron-left.svg" alt="Previous">
-          </button>
-          <div class="testimonial-card">
-            <h3 class="testimonial-heading">Placerat feugiat senectus</h3>
-            <p class="sub-title">
-              Ultricies pharetra arcu turpis dui massa interdum lorem. Viverra
-              nunc quisque congue tincidunt potenti. Tellus, enim vel habitasse
-              commodo ultrices aenean ultricies.
-            </p>
-            <div class="testimonial-user">
-              <img src="/imgs/User Thumb (1).svg" alt="Jane Doe"
-                class="testimonial-avatar">
-              <div>
-                <div class="testimonial-name">Jane Doe</div>
-                <div class="testimonial-role">Senior Designer</div>
+          <div class="swiper testimonials-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide testimonial-card">
+                <h3 class="testimonial-heading">Placerat feugiat senectus</h3>
+                <p class="sub-title">
+                  Ultricies pharetra arcu turpis dui massa interdum lorem.
+                  Viverra
+                  nunc quisque congue tincidunt potenti. Tellus, enim vel
+                  habitasse
+                  commodo ultrices aenean ultricies.
+                </p>
+                <div class="testimonial-user">
+                  <img src="/imgs/User Thumb (1).svg" alt="Jane Doe"
+                    class="testimonial-avatar">
+                  <div>
+                    <div class="testimonial-name">Jane Doe</div>
+                    <div class="testimonial-role">Senior Designer</div>
+                  </div>
+                </div>
+              </div>
+               <div class="swiper-slide testimonial-card">
+                <h3 class="testimonial-heading">Placerat feugiat senectus</h3>
+                <p class="sub-title">
+                  Ultricies pharetra arcu turpis dui massa interdum lorem.
+                  Viverra
+                  nunc quisque congue tincidunt potenti. Tellus, enim vel
+                  habitasse
+                  commodo ultrices aenean ultricies.
+                </p>
+                <div class="testimonial-user">
+                  <img src="/imgs/User Thumb (1).svg" alt="Jane Doe"
+                    class="testimonial-avatar">
+                  <div>
+                    <div class="testimonial-name">Jane Doe</div>
+                    <div class="testimonial-role">Senior Designer</div>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <!-- Navigation -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
+          <!-- <button class="testimonials-arrow left">
+            <img src="/imgs/chevron-left.svg" alt="Previous">
+          </button>
+
           <button class="testimonials-arrow right">
             <img src="/imgs/chevron-right.svg" alt="Next">
-          </button>
+          </button> -->
         </div>
 
       </div>
@@ -452,4 +482,21 @@
       </div>
     </footer>
   </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+  const swiper = new Swiper('.testimonials-slider', {
+    // loop: true,
+    // autoplay: { delay: 3000 },
+    slidesPerView: 1,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
 </html>

@@ -340,6 +340,12 @@ img {
   position: relative;
   gap: 24px;
   z-index: 2;
+    background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px 0 rgba(30, 41, 59, 0.1);
+  padding: 48px !important;
+  max-width: 756px;
+  margin: 0 auto;
 }
 
 .testimonials-arrow {
@@ -359,11 +365,7 @@ img {
 }
 
 .testimonial-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 24px 0 rgba(30, 41, 59, 0.1);
-  padding: 48px;
-  max-width: 756px;
+
   text-align: center;
   display: flex;
   flex-direction: column;
