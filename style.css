@@ -214,6 +214,7 @@ img {
   justify-content: center;
   gap: 24px;
   margin-top: 80px;
+  padding: 0 72px;
 }
 
 .stories-arrow {
@@ -225,8 +226,16 @@ img {
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 4px 0px #00000012, 0px 4px 6px -1px #0000001a;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
 }
-
+.stories-arrow-left {
+  left: -72px;
+}
+.stories-arrow-right {
+  right: -72px;
+}
 .stories-arrow:hover {
   background: #a020f0;
 }
@@ -234,21 +243,21 @@ img {
 .stories-list {
   display: flex;
   gap: 32px;
+  max-width: 100%;
+  position: relative;
 }
 
-/* .story-card {
+.story-card {
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
-  min-width: 266px;
-  min-height: 300px;
   display: flex;
   flex-direction: column;
   transition: transform 0.2s;
   gap: 16px;
-  border: 1px solid #e2e8f0;
   box-shadow: 0px 0px 4px 0px #00000012, 0px 4px 6px -1px #0000001a;
-} */
+  height: fit-content !important;
+}
 
 .story-img-wrap {
   position: relative;
@@ -278,7 +287,7 @@ img {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 0 16px;
+  padding: 16px;
   background: #fff;
 }
 
@@ -366,7 +375,7 @@ img {
 .testimonials-arrow-right {
   right: -72px;
 }
-.swiper{
+.swiper {
   position: unset !important;
 }
 .testimonials-arrow:hover {
